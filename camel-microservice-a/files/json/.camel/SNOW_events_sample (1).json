@@ -1,6 +1,6 @@
 {
 	processing_sn_node": {
-		"link": "https://ven02121.service-now.com/api/now/v1/table/sys_cluster_state/44e32a06b5da8c564573750e3e7654b3",
-		"value": "44e32a06b5da8c564573750e3e7654b3"
+		"link": "https://test.service-now.com/api/now/v1/table/sys_cluster_state/44e32xxxxxxxxxx7654b3",
+		"value": "44e32xxxxxxxx3e7654b3"
 	}
 }
