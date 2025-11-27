@@ -2,5 +2,5 @@
 	"id": 1000,
 	"from": "USD",
 	"to":"INR",
-	"conversionMultiple": 70
+	"conversionMultiple": 10
 }

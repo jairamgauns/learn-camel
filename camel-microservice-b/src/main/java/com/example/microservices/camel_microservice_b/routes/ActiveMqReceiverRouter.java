@@ -29,10 +29,14 @@ public class ActiveMqReceiverRouter extends RouteBuilder{
 		 * .to("log:receiver-mq");
 		 */
 		
-		from("activemq:my-activemq-xml-queue")
-		.unmarshal().jacksonXml(CurrencyExchange.class)
-		.log("${body}")
-		.to("log:receiver-activemq-xml-queue");
+		/*
+		 * from("activemq:my-activemq-xml-queue")
+		 * .unmarshal().jacksonXml(CurrencyExchange.class) .log("${body}")
+		 * .to("log:receiver-activemq-xml-queue");
+		 */
+		
+		from("activemq:split-queue")
+		.to("log:receiver-activemq-split-queue");
 		
 	}
 

@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyFileRouter extends RouteBuilder{
 	
 	@Autowired
@@ -23,7 +23,7 @@ public class MyFileRouter extends RouteBuilder{
 		from("file:files/input")
 		.routeId("file-input-route")
 		.transform().body(String.class)
-		.choice()
+		.choice()  // content based routing
 			.when(simple("${file:ext} ends with 'xml' "))
 				.log("Xml file")
 			//.when(simple("${body} contains 'USD' "))
