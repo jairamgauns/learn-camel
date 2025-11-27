@@ -1,0 +1,6 @@
+{
+	"id": 3000,
+	"from": "USD",
+	"to":"INR",
+	"conversionMultiple": 30
+}
