@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CurrencyExchange>
+    <id>1000</id>
+    <from>USD</from>
+    <to>INR</to>
+    <conversionMultiple>50</conversionMultiple>
+</CurrencyExchange>
+

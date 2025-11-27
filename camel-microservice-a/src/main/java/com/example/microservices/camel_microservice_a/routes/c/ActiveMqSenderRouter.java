@@ -3,7 +3,7 @@ package com.example.microservices.camel_microservice_a.routes.c;
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class ActiveMqSenderRouter extends RouteBuilder{
 
 	@Override
@@ -15,9 +15,13 @@ public class ActiveMqSenderRouter extends RouteBuilder{
 		 */
 
 	
-		from("file:files/json")
+		/*
+		 * from("file:files/json") .log("${body}") .to("activemq:my-activemq-queue");
+		 */
+		
+		from("file:files/xml")
 		.log("${body}")
-		.to("activemq:my-activemq-queue");
+		.to("activemq:my-activemq-xml-queue");
 	}
 
 }
