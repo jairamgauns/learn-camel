@@ -23,6 +23,10 @@ public class EIPPatternsRouter extends RouteBuilder{
 
 	@Override
 	public void configure() throws Exception {
+		
+		//getContext().setTracing(true);
+		//errorHandler(deadLetterChannel("activemq:dead-letter-queue"));
+		
 		/*
 		 * from("timer:multicast?period=10000") .multicast() .to("log:something1",
 		 * "log:something2", "log:something3");
@@ -54,6 +58,7 @@ public class EIPPatternsRouter extends RouteBuilder{
 		
 		
 		from("direct:endpoint1")
+		.wireTap("log:wire-tap")
 		.to("{{endpoint-for-logging}}");
 		
 		from("direct:endpoint2")
